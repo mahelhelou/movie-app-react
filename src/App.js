@@ -81,9 +81,11 @@ const App = () => {
 	}
 
 	const addFavoriteMovie = movie => {
-		const newFavoritesList = favorites.indexOf(movie) === -1 ? [...favorites, movie] : [...favorites]
-		setFavorites(newFavoritesList)
-		saveFavoriteMoviesToLocalStorage(newFavoritesList)
+		if (favorites.indexOf(movie) === -1) {
+			const newFavoritesList = [...favorites, movie]
+			setFavorites(newFavoritesList)
+			saveFavoriteMoviesToLocalStorage(newFavoritesList)
+		}
 	}
 
 	const removeFavoriteMovie = movie => {
