@@ -16,7 +16,7 @@
 
 - [API Key](http://www.omdbapi.com/apikey.aspx)
 
-## 1. Add Movies to State
+## Add Movies to State
 
 The `App component` will hold the state for the app. That way we can keep everything organized in one place and pass different pieces of state to different components.
 
@@ -56,7 +56,7 @@ const App = () => {
 export default App
 ```
 
-## 2. Create MovieList Component
+## Create MovieList Component
 
 - We'll pass in a list of movies as props
 - We'll use the map function to loop over these movies
