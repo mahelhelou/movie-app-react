@@ -15,6 +15,7 @@
 ## Resources
 
 - [API Key](http://www.omdbapi.com/apikey.aspx)
+- [Deploy React App](https://create-react-app.dev/docs/deployment/)
 
 ## Add Movies to State
 
@@ -423,5 +424,30 @@ const App = () => {
 		setFavorites(newFavoritesList)
 		saveFavoriteMoviesToLocalStorage(newFavoritesList)
 	}
+}
+```
+
+## Deployment & Going Live
+
+- This app has been deployed to `Netlify`
+- In deployment process, I removed the following `dependencies` to minimize the generated `bundled javascript`.
+- Just run `npm uninstall <dependency_name>` to remove them
+
+```json
+"dependencies": {
+	"@testing-library/jest-dom": "^5.11.4",
+	"@testing-library/react": "^11.1.0",
+	"@testing-library/user-event": "^12.1.10",
+	"web-vitals": "^0.2.4"
+}
+```
+
+### How I Removed Unwanted Packages / Dependencies in a Better Way?
+
+I built a script in `package.json` file to remove all these packages with one single command.
+
+```json
+"scripts": {
+	"uninstall": "npm uninstall @testing-library/jest-dom @testing-library/react @testing-library/user-event web-vitals"
 }
 ```
