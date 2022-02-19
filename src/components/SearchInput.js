@@ -1,3 +1,5 @@
+import React from 'react'
+
 const SearchInput = props => {
 	return (
 		<div className='col col-sm-4'>
